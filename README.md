@@ -1,3 +1,5 @@
+> **Stabilized.** Active development continues at [sw-embed/web-sw-cor24-forth](https://github.com/sw-embed/web-sw-cor24-forth). Bug fixes here may not yet be reflected in the fork — a commit comparison is pending.
+
 # web-tf24a
 
 Web UI for [Tiny Forth](https://github.com/sw-vibe-coding/tf24a) on COR24. Browser-based Forth debugger running the tf24a DTC Forth interpreter on the COR24 emulator via Rust, Yew, and WebAssembly.
