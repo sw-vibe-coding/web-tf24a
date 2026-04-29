@@ -1,0 +1,1 @@
+Got Forth REPL working end-to-end: Bootstrap tier assembles and runs correctly producing 'OK *  6 *' output then halts. Added UART poll-before-feed queue, auto-scroll on output, disassembly view around PC, and debugger starts paused for stepping. Step/step-over/pause/resume/reset all verified with Playwright. Clippy clean, trunk build passes.

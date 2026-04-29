@@ -1,0 +1,5 @@
+Playwright-tested all debugger panels end-to-end and fixed 2 bugs found:
+
+Tested: (1) initial load state - correct paused state with empty stacks, (2) stepping - registers change with yellow highlighting, PC advances, disassembly tracks current instruction, (3) breakpoints - click disassembly line toggles breakpoint marker, Run stops at breakpoint, status bar shows BP count, (4) dictionary browser - clicking words shows inspector with threaded definition or primitive disassembly, (5) compile log tab - shows assembler output with addresses and hex bytes, (6) reset - returns to initial state, (7) full run - produces correct "OK * 6 *" output.
+
+Fixed: (1) Return stack and caller chain showed 64 bogus entries on initial load because RSP=0 made the walker read entire uninitialized memory. Added guard: skip when RSP==0 or RSP>=base. (2) Word inspector displayed literal values after do_lit as resolved label names (e.g., "tx3+3" instead of "42"). Added literal-following-state tracking in read_word_thread() for do_lit, do_branch, do_zbranch.
